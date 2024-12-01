@@ -40,6 +40,7 @@ class Rational {
             return Rational(new_num, new_denom);
         }
 
+
         // Opérateur de conversion en float
         operator float() const {
             return static_cast<float>(num) / static_cast<float>(denom);
