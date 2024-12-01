@@ -46,6 +46,7 @@ class Rational {
             return static_cast<float>(num) / static_cast<float>(denom);
         }
         
+        
 };
 
 int main() {
