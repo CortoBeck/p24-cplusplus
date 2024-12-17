@@ -11,13 +11,15 @@ class IntStack
 public:
     void push(int e)
     {
-        if (top==16){ 
-            std::cout<< "la pile est pleine";
+        if (is_full())
+        {
+            std::cout << "la pile est pleine";
         }
-        else {
-            tab[top]=e;
-            top=top+1;
-            }
+        else
+        {
+            tab[top] = e;
+            top = top + 1;
+        }
         // cette fonction ajoute l'entier e dans la pile
         // votre code ici
     }
@@ -26,51 +28,53 @@ public:
         // cette fonction retourne le dernier entier empilé
         // votre code ici
         return tab[top];
-
     }
-    
+
     int pop()
     {
         // cette fonction retourne le dernier entier empilé
         // et supprime cet entier de la pile
         // votre code ici
-        top=top-1;
-        return tab[top-1];
-        
-        
+        if (is_empty())
+        {
+            std::cout << "La pile est vide";
+        }
+        top = top - 1;
+        return tab[top];
     }
     bool is_empty()
     {
         // cette fonction teste si la pile est vide
         // votre code ici
-        return top==0;
+        return top == 0;
     }
     bool is_full()
     {
         // cette fonction teste si la pile est pleine
         // il y a SIZE entiers dans la pile
         // votre code ici
-        return top==(size-1);
+        return top == (size - 1);
     }
     void print()
     {
         std::cout << '[';
-        for (int i=0; i<top; i++){
+        for (int i = 0; i < top; i++)
+        {
             std::cout << tab[i] << ' ';
         }
-            
+
         std::cout << '[' << std::endl;
     }
 
-        // cette fonction affiche la pile, par exemple
-        // [1 2 3 [ pour dire que 3 entiers sont dans la pile
-        // le dernier empilé est 3
-        // votre code ici
+    // cette fonction affiche la pile, par exemple
+    // [1 2 3 [ pour dire que 3 entiers sont dans la pile
+    // le dernier empilé est 3
+    // votre code ici
 
 private:
-int tab[SIZE];
-int top=0;
-int size = SIZE;
+    int tab[SIZE];
+    int top = 0;
+    int size = SIZE;
     // vos attributs pour représenter la pile d'entier
     // dans cette version toutes les piles sont de taille SIZE
     // votre code ici
