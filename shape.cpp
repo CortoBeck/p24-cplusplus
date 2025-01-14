@@ -106,7 +106,7 @@ int main() {
     shape* shape1 = find_at_position(14, 26, shapes);
     if (shape1) {
         std::cout << "Found shape at (14, 26): area = " << shape1->area() << std::endl;
-        shape1->move(1, 1); // Exemple d'appel à move
+        shape1->move(1, 1); 
     }
 
     shape* shape2 = find_at_position(100, 200, shapes);
