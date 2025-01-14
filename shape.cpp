@@ -92,19 +92,17 @@ shape* find_at_position(float px, float py, const std::vector<shape*>& shapes) {
 }
 
 int main() {
-    circle c(10, 20, 4.5f);       // x, y, radius
-    rectangle r(20, 30, 30, 60); // x, y, width, height
+    circle c(10, 20, 4.5f);
+    rectangle r(20, 30, 30, 60);
     std::vector<shape*> shapes;
     shapes.push_back(&c);
     shapes.push_back(&r);
 
-    // première version (sans find_at_position et is_at_position)
     shapes[0]->move(4, 6);
     shapes[1]->move(2, 8);
-    std::cout << shapes[0]->area() << std::endl; // affiche dans les 63.585
-    std::cout << shapes[1]->area() << std::endl; // 1800
+    std::cout << shapes[0]->area() << std::endl;
+    std::cout << shapes[1]->area() << std::endl;
 
-    // deuxième version (avec find_at_position et is_at_position)
     shape* shape1 = find_at_position(14, 26, shapes);
     if (shape1) {
         std::cout << "Found shape at (14, 26): area = " << shape1->area() << std::endl;
