@@ -7,6 +7,7 @@ namespace toto
     IntStack::IntStack() : IntStack(SIZE) {}
 
     IntStack::~IntStack()
+    
     {
         delete[] tab;
     }
