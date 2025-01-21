@@ -1,5 +1,6 @@
 #include "I.h"
 
+
 namespace toto
 {
     IntStack::IntStack(int s) : size(s), top(0), tab(new int[s]) {}
