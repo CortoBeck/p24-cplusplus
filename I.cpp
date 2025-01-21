@@ -60,6 +60,7 @@ namespace toto
         return top == size;
     }
 
+
     void IntStack::print() const
     {
         std::cout << '[';
@@ -67,6 +68,6 @@ namespace toto
         {
             std::cout << tab[i] << ' ';
         }
-        std::cout << "[\n";
+        std::cout << "]" << std::endl;
     }
 }
