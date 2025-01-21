@@ -81,7 +81,7 @@ public:
         {
             std::cout << tab[i] << ' ';
         }
-        std::cout << "[\n";
+        std::cout << "]" << std::endl;
     }
 
 private:
